@@ -1,0 +1,737 @@
+EESchema Schematic File Version 5
+LIBS:WiFi2DMX-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 5700 2300 0    50   ~ 0
+U2TXD
+Text Label 5700 1700 0    50   ~ 0
+DE
+$Comp
+L Device:C C1
+U 1 1 5D80E353
+P 3600 2950
+F 0 "C1" H 3715 2996 50  0000 L CNN
+F 1 "1u" H 3715 2905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3638 2800 50  0001 C CNN
+F 3 "https://mouser.com/ds/2/281/murata_03052018_GRM_Series_1-1310166.pdf" H 3600 2950 50  0001 C CNN
+F 4 "GRM155R61E105KA12D" H 3600 2950 60  0001 C CNN "MPN"
+F 5 "yes" H 3600 2950 50  0001 C CNN "exchangeable"
+	1    3600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5D80E354
+P 3800 2600
+F 0 "#PWR01" H 3800 2450 50  0001 C CNN
+F 1 "+3.3V" H 3800 2750 50  0000 C CNN
+F 2 "" H 3800 2600 50  0000 C CNN
+F 3 "" H 3800 2600 50  0000 C CNN
+	1    3800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D80E355
+P 4000 950
+F 0 "R1" H 4070 904 50  0000 L CNN
+F 1 "10k" H 4070 995 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3930 950 50  0001 C CNN
+F 3 "https://mouser.com/ds/2/447/PYu-RC_Group_51_RoHS_L_9-1314892.pdf" H 4000 950 50  0001 C CNN
+F 4 "RC0402FR-0710KL" H 1100 -3850 50  0001 C CNN "MPN"
+F 5 "yes" H 4000 950 50  0001 C CNN "exchangeable"
+	1    4000 950 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR03
+U 1 1 5D80E356
+P 4000 700
+F 0 "#PWR03" H 4000 550 50  0001 C CNN
+F 1 "+3.3V" H 4000 850 50  0000 C CNN
+F 2 "" H 4000 700 50  0000 C CNN
+F 3 "" H 4000 700 50  0000 C CNN
+	1    4000 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5D80E357
+P 4000 2950
+F 0 "C3" H 3885 2904 50  0000 R CNN
+F 1 "100n" H 3885 2995 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4038 2800 50  0001 C CNN
+F 3 "https://mouser.com/ds/2/281/murata_03052018_GRM_Series_1-1310166.pdf" H 4000 2950 50  0001 C CNN
+F 4 "GRM155R71A104MA01D" V 4000 2950 60  0001 C CNN "MPN"
+F 5 "yes" H 4000 2950 50  0001 C CNN "exchangeable"
+	1    4000 2950
+	-1   0    0    1   
+$EndComp
+Connection ~ 3800 2700
+Wire Wire Line
+	4000 800  4000 700 
+Wire Wire Line
+	4000 1100 4000 1200
+Wire Wire Line
+	3600 2800 3600 2700
+Wire Wire Line
+	3600 2700 3800 2700
+Wire Wire Line
+	4000 2700 4000 2800
+Wire Wire Line
+	3800 2600 3800 2700
+Wire Wire Line
+	3800 2700 4000 2700
+Connection ~ 4000 1200
+NoConn ~ 4500 2900
+NoConn ~ 4500 2800
+Text Notes 4500 1500 2    60   ~ 0
+IN ONLY
+Text Label 4500 1200 2    60   ~ 0
+~RESET~
+Wire Wire Line
+	5100 900  5100 1000
+$Comp
+L power:+3.3V #PWR05
+U 1 1 5D80E35C
+P 5100 900
+F 0 "#PWR05" H 5100 750 50  0001 C CNN
+F 1 "+3.3V" H 5100 1040 50  0000 C CNN
+F 2 "" H 5100 900 50  0000 C CNN
+F 3 "" H 5100 900 50  0000 C CNN
+	1    5100 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3900 5100 3800
+$Comp
+L power:GND #PWR06
+U 1 1 5D80E35D
+P 5100 3900
+F 0 "#PWR06" H 5100 3650 50  0001 C CNN
+F 1 "GND" H 5105 3727 50  0000 C CNN
+F 2 "" H 5100 3900 50  0001 C CNN
+F 3 "" H 5100 3900 50  0001 C CNN
+	1    5100 3900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4500 2700
+NoConn ~ 4500 2600
+NoConn ~ 4500 2500
+NoConn ~ 4500 2400
+Text Notes 4500 1400 2    60   ~ 0
+IN ONLY
+Wire Wire Line
+	4000 1200 4000 1300
+$Comp
+L Device:C C2
+U 1 1 5D80E35F
+P 4000 1450
+F 0 "C2" H 4115 1404 50  0000 L CNN
+F 1 "100n" H 4115 1495 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4038 1300 50  0001 C CNN
+F 3 "https://mouser.com/ds/2/281/murata_03052018_GRM_Series_1-1310166.pdf" H 4000 1450 50  0001 C CNN
+F 4 "GRM155R71A104MA01D" H 2900 -5450 50  0001 C CNN "MPN"
+F 5 "yes" H 4000 1450 50  0001 C CNN "exchangeable"
+	1    4000 1450
+	-1   0    0    1   
+$EndComp
+Connection ~ 3800 3200
+$Comp
+L power:GND #PWR02
+U 1 1 5D80E360
+P 3800 3300
+F 0 "#PWR02" H 3800 3050 50  0001 C CNN
+F 1 "GND" H 3800 3150 50  0000 C CNN
+F 2 "" H 3800 3300 50  0001 C CNN
+F 3 "" H 3800 3300 50  0001 C CNN
+	1    3800 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 3100 3600 3200
+Wire Wire Line
+	3800 3200 4000 3200
+Wire Wire Line
+	3600 3200 3800 3200
+Wire Wire Line
+	3800 3300 3800 3200
+Wire Wire Line
+	4000 3100 4000 3200
+$Comp
+L power:GND #PWR04
+U 1 1 5D80E35E
+P 4000 1900
+F 0 "#PWR04" H 4000 1650 50  0001 C CNN
+F 1 "GND" H 4000 1750 50  0000 C CNN
+F 2 "" H 4000 1900 50  0001 C CNN
+F 3 "" H 4000 1900 50  0001 C CNN
+	1    4000 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1300 3600 1200
+Wire Wire Line
+	3600 1800 3600 1700
+Text Notes 5700 3500 0    60   ~ 0
+IN ONLY
+Text Notes 5700 3400 0    60   ~ 0
+IN ONLY
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5D7CB556
+P 3600 1500
+F 0 "SW1" V 3646 1648 50  0000 L CNN
+F 1 "reset" V 3555 1648 50  0000 L CNN
+F 2 "Button_Switch_SMD:SW_SPST_CK_RS282G05A3" H 3600 1700 50  0001 C CNN
+F 3 "~" H 3600 1700 50  0001 C CNN
+	1    3600 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3600 1200 4000 1200
+Wire Wire Line
+	3600 1800 4000 1800
+Wire Wire Line
+	4000 1600 4000 1800
+Wire Wire Line
+	4000 1900 4000 1800
+Connection ~ 4000 1800
+Wire Wire Line
+	4000 1200 4500 1200
+Text Label 5700 1300 0    50   ~ 0
+U0TXD0
+Text Label 5700 1500 0    50   ~ 0
+U0RXD0
+Text Label 5700 1200 0    50   ~ 0
+MODE
+Text Label 2600 600  0    50   ~ 0
+MODE
+Text Label 1100 1100 0    50   ~ 0
+U0RXD0
+Text Label 1100 1000 0    50   ~ 0
+U0TXD0
+$Comp
+L RF_Module:ESP32-WROOM-32 U1
+U 1 1 5D80E35B
+P 5100 2400
+F 0 "U1" H 4650 3750 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 5500 3750 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 5100 900 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 4800 2450 50  0001 C CNN
+	1    5100 2400
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	500  2100 3100 2100
+Wire Wire Line
+	1700 1200 1700 900 
+Connection ~ 1700 1200
+Wire Wire Line
+	1700 900  1800 900 
+Wire Wire Line
+	1700 1200 2400 1200
+Wire Wire Line
+	1800 1600 1700 1600
+$Comp
+L Device:R R2
+U 1 1 5D8DEE22
+P 1950 900
+F 0 "R2" V 1743 900 50  0000 C CNN
+F 1 "10k" V 1834 900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1880 900 50  0001 C CNN
+F 3 "~" H 1950 900 50  0001 C CNN
+	1    1950 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:FDG1024NZ Q1
+U 2 1 5D8DEE24
+P 2400 1600
+F 0 "Q1" H 2606 1554 50  0000 L CNN
+F 1 "FDG1024NZ" H 2606 1645 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 2600 1525 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/FD/FDG1024NZ.pdf" H 2400 1600 50  0001 L CNN
+	2    2400 1600
+	1    0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:FDG1024NZ Q1
+U 1 1 5D8DEE23
+P 2400 900
+F 0 "Q1" H 2606 946 50  0000 L CNN
+F 1 "FDG1024NZ" H 2606 855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 2600 825 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/FD/FDG1024NZ.pdf" H 2400 900 50  0001 L CNN
+	1    2400 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 900  2200 900 
+Wire Wire Line
+	2500 700  2500 600 
+Wire Wire Line
+	2500 600  2600 600 
+Wire Wire Line
+	2500 1200 2500 1100
+Wire Wire Line
+	2500 1300 2400 1200
+Wire Wire Line
+	2500 1400 2500 1300
+$Comp
+L Device:R R3
+U 1 1 5D8DEE21
+P 1950 1600
+F 0 "R3" V 2065 1600 50  0000 C CNN
+F 1 "10k" V 2156 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1880 1600 50  0001 C CNN
+F 3 "~" H 1950 1600 50  0001 C CNN
+	1    1950 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 1600 2200 1600
+Wire Wire Line
+	2500 1800 2500 1900
+Wire Wire Line
+	2500 1900 2600 1900
+Text Label 2600 1900 0    50   ~ 0
+~RESET~
+Wire Wire Line
+	1100 1200 1700 1200
+Wire Notes Line
+	500  500  500  2100
+Wire Notes Line
+	500  500  3100 500 
+Wire Wire Line
+	2400 1300 2500 1200
+Wire Wire Line
+	1100 1300 1700 1300
+Connection ~ 1700 1300
+Wire Wire Line
+	1700 1600 1700 1300
+Wire Wire Line
+	1700 1300 2400 1300
+Wire Notes Line
+	3100 500  3100 2100
+$Sheet
+S 600  900  500  1100
+U 5D81C963
+F0 "FT231XS" 50
+F1 "subsch/FT231XS.sch" 50
+F2 "~TXDEN~" O R 1100 1800 50 
+F3 "~DCD~" O R 1100 1600 50 
+F4 "~RI~" O R 1100 1700 50 
+F5 "~RTS~" O R 1100 1200 50 
+F6 "~CTS~" O R 1100 1500 50 
+F7 "RXD" I R 1100 1000 50 
+F8 "~DTR~" O R 1100 1300 50 
+F9 "~SLEEP~" O R 1100 1900 50 
+F10 "~DSR~" O R 1100 1400 50 
+F11 "TXD" O R 1100 1100 50 
+$EndSheet
+NoConn ~ 1100 1400
+NoConn ~ 1100 1500
+NoConn ~ 1100 1600
+NoConn ~ 1100 1700
+NoConn ~ 1100 1800
+NoConn ~ 1100 1900
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5D835D8E
+P 2200 2500
+F 0 "H1" H 2300 2546 50  0000 L CNN
+F 1 "MountingHole" H 2300 2455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2200 2500 50  0001 C CNN
+F 3 "~" H 2200 2500 50  0001 C CNN
+	1    2200 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5D838A6A
+P 2200 2700
+F 0 "H2" H 2300 2746 50  0000 L CNN
+F 1 "MountingHole" H 2300 2655 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2200 2700 50  0001 C CNN
+F 3 "~" H 2200 2700 50  0001 C CNN
+	1    2200 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AP2112K-3.3 U5
+U 1 1 5D833620
+P 1200 3000
+F 0 "U5" H 1200 3342 50  0000 C CNN
+F 1 "AP2112K-3.3" H 1200 3251 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1200 3325 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 1200 3100 50  0001 C CNN
+	1    1200 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  2900 800  2900
+Wire Wire Line
+	800  2900 800  3000
+Wire Wire Line
+	800  3000 900  3000
+$Comp
+L power:GND #PWR0101
+U 1 1 5D836836
+P 1200 3500
+F 0 "#PWR0101" H 1200 3250 50  0001 C CNN
+F 1 "GND" H 1205 3327 50  0000 C CNN
+F 2 "" H 1200 3500 50  0001 C CNN
+F 3 "" H 1200 3500 50  0001 C CNN
+	1    1200 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3500 1200 3300
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5D837370
+P 1600 2800
+F 0 "#PWR0102" H 1600 2650 50  0001 C CNN
+F 1 "+3.3V" H 1615 2973 50  0000 C CNN
+F 2 "" H 1600 2800 50  0001 C CNN
+F 3 "" H 1600 2800 50  0001 C CNN
+	1    1600 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2900 1600 2900
+Wire Wire Line
+	1600 2900 1600 2800
+$Comp
+L power:VBUS #PWR0103
+U 1 1 5D839D26
+P 800 2800
+F 0 "#PWR0103" H 800 2650 50  0001 C CNN
+F 1 "VBUS" H 815 2973 50  0000 C CNN
+F 2 "" H 800 2800 50  0001 C CNN
+F 3 "" H 800 2800 50  0001 C CNN
+	1    800  2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  2800 800  2900
+Connection ~ 800  2900
+$Comp
+L Device:C C11
+U 1 1 5D83D8A0
+P 800 3250
+F 0 "C11" H 915 3204 50  0000 L CNN
+F 1 "1u" H 915 3295 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 838 3100 50  0001 C CNN
+F 3 "https://mouser.com/ds/2/281/murata_03052018_GRM_Series_1-1310166.pdf" H 800 3250 50  0001 C CNN
+F 4 "GRM155R71A104MA01D" H -300 -3650 50  0001 C CNN "MPN"
+F 5 "yes" H 800 3250 50  0001 C CNN "exchangeable"
+	1    800  3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5D840507
+P 1600 3250
+F 0 "C12" H 1485 3204 50  0000 R CNN
+F 1 "1u" H 1485 3295 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1638 3100 50  0001 C CNN
+F 3 "https://mouser.com/ds/2/281/murata_03052018_GRM_Series_1-1310166.pdf" H 1600 3250 50  0001 C CNN
+F 4 "GRM155R71A104MA01D" H 500 -3650 50  0001 C CNN "MPN"
+F 5 "yes" H 1600 3250 50  0001 C CNN "exchangeable"
+	1    1600 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	800  3100 800  3000
+Connection ~ 800  3000
+Wire Wire Line
+	1600 3100 1600 2900
+Connection ~ 1600 2900
+$Comp
+L power:GND #PWR0104
+U 1 1 5D842A0C
+P 800 3500
+F 0 "#PWR0104" H 800 3250 50  0001 C CNN
+F 1 "GND" H 805 3327 50  0000 C CNN
+F 2 "" H 800 3500 50  0001 C CNN
+F 3 "" H 800 3500 50  0001 C CNN
+	1    800  3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	800  3500 800  3400
+Wire Wire Line
+	1600 3400 1600 3500
+$Comp
+L power:GND #PWR0105
+U 1 1 5D8441AC
+P 1600 3500
+F 0 "#PWR0105" H 1600 3250 50  0001 C CNN
+F 1 "GND" H 1605 3327 50  0000 C CNN
+F 2 "" H 1600 3500 50  0001 C CNN
+F 3 "" H 1600 3500 50  0001 C CNN
+	1    1600 3500
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	500  2200 500  4200
+Wire Notes Line
+	500  4200 1900 4200
+Wire Notes Line
+	1900 4200 1900 2200
+Wire Notes Line
+	1900 2200 500  2200
+Text Notes 600  600  0    50   ~ 10
+USB UART and reset circuit
+Wire Notes Line
+	3200 500  3200 4200
+Wire Notes Line
+	3200 4200 6100 4200
+Wire Notes Line
+	6100 4200 6100 500 
+Wire Notes Line
+	3200 500  6100 500 
+Text Notes 3300 600  0    50   ~ 10
+MCU
+$Comp
+L power:GND #PWR010
+U 1 1 5D7A8D73
+P 7500 2000
+F 0 "#PWR010" H 7500 1750 50  0001 C CNN
+F 1 "GND" H 7505 1827 50  0000 C CNN
+F 2 "" H 7500 2000 50  0001 C CNN
+F 3 "" H 7500 2000 50  0001 C CNN
+	1    7500 2000
+	1    0    0    -1  
+$EndComp
+Text Label 7900 1600 0    50   ~ 0
+485-
+$Comp
+L power:+3.3V #PWR09
+U 1 1 5D7A9105
+P 7500 1000
+F 0 "#PWR09" H 7500 850 50  0001 C CNN
+F 1 "+3.3V" H 7515 1173 50  0000 C CNN
+F 2 "" H 7500 1000 50  0001 C CNN
+F 3 "" H 7500 1000 50  0001 C CNN
+	1    7500 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:XLR3 J1
+U 1 1 5D7AB19D
+P 8300 1000
+F 0 "J1" H 8300 1365 50  0000 C CNN
+F 1 "XLR3" H 8300 1274 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B3B-PH-K_1x03_P2.00mm_Vertical" H 8300 1000 50  0001 C CNN
+F 3 " ~" H 8300 1000 50  0001 C CNN
+	1    8300 1000
+	1    0    0    -1  
+$EndComp
+Text Label 6500 1700 2    50   ~ 0
+U2TXD
+Text Label 7900 1400 0    50   ~ 0
+485+
+$Comp
+L power:GND #PWR011
+U 1 1 5D7AEB76
+P 7900 1000
+F 0 "#PWR011" H 7900 750 50  0001 C CNN
+F 1 "GND" V 7905 872 50  0000 R CNN
+F 2 "" H 7900 1000 50  0001 C CNN
+F 3 "" H 7900 1000 50  0001 C CNN
+	1    7900 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Interface_UART:MAX3072E U2
+U 1 1 5D7AA211
+P 7500 1500
+F 0 "U2" H 7200 1900 50  0000 L CNN
+F 1 "MAX3072E" H 7100 1100 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8550 1150 50  0001 C CIN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX3070E-MAX3079E.pdf" H 7500 1500 50  0001 C CNN
+	1    7500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5D7B1F0C
+P 8800 2000
+F 0 "#PWR013" H 8800 1750 50  0001 C CNN
+F 1 "GND" H 8805 1827 50  0000 C CNN
+F 2 "" H 8800 2000 50  0001 C CNN
+F 3 "" H 8800 2000 50  0001 C CNN
+	1    8800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR012
+U 1 1 5D7B2323
+P 8800 1500
+F 0 "#PWR012" H 8800 1350 50  0001 C CNN
+F 1 "+3.3V" H 8815 1673 50  0000 C CNN
+F 2 "" H 8800 1500 50  0001 C CNN
+F 3 "" H 8800 1500 50  0001 C CNN
+	1    8800 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5D7B0996
+P 8800 1750
+F 0 "C4" H 8915 1796 50  0000 L CNN
+F 1 "100n" H 8915 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8838 1600 50  0001 C CNN
+F 3 "~" H 8800 1750 50  0001 C CNN
+	1    8800 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 1900 8800 2000
+Wire Wire Line
+	7900 1600 8600 1600
+Wire Wire Line
+	8100 1500 8200 1500
+Wire Wire Line
+	7000 1400 7000 1600
+Wire Wire Line
+	7100 1400 7000 1400
+Wire Wire Line
+	7500 1000 7500 1100
+Wire Wire Line
+	8800 1500 8800 1600
+$Comp
+L Device:R R6
+U 1 1 5D7A6B4F
+P 8350 1500
+F 0 "R6" V 8500 1500 50  0000 C CNN
+F 1 "120" V 8600 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8280 1500 50  0001 C CNN
+F 3 "~" H 8350 1500 50  0001 C CNN
+	1    8350 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 1400 6600 1400
+Wire Wire Line
+	7000 1600 7100 1600
+$Comp
+L Device:R R4
+U 1 1 5D7AC34D
+P 6750 1300
+F 0 "R4" V 6543 1300 50  0000 C CNN
+F 1 "R" V 6634 1300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 1300 50  0001 C CNN
+F 3 "~" H 6750 1300 50  0001 C CNN
+	1    6750 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5D7ADF53
+P 6500 1300
+F 0 "#PWR07" H 6500 1050 50  0001 C CNN
+F 1 "GND" V 6505 1172 50  0000 R CNN
+F 2 "" H 6500 1300 50  0001 C CNN
+F 3 "" H 6500 1300 50  0001 C CNN
+	1    6500 1300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7500 2000 7500 1900
+Wire Wire Line
+	8600 1600 8700 1600
+Text Label 6500 1600 2    50   ~ 0
+DE
+$Comp
+L power:GND #PWR08
+U 1 1 5D7B74D7
+P 6500 1400
+F 0 "#PWR08" H 6500 1150 50  0001 C CNN
+F 1 "GND" V 6505 1272 50  0000 R CNN
+F 2 "" H 6500 1400 50  0001 C CNN
+F 3 "" H 6500 1400 50  0001 C CNN
+	1    6500 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5D7B74CC
+P 6750 1400
+F 0 "R5" V 6865 1400 50  0000 C CNN
+F 1 "R" V 6956 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 1400 50  0001 C CNN
+F 3 "~" H 6750 1400 50  0001 C CNN
+	1    6750 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7900 1400 8100 1400
+Wire Wire Line
+	8700 1600 8700 1000
+Wire Wire Line
+	7900 1000 8000 1000
+Wire Wire Line
+	6500 1700 7100 1700
+Connection ~ 7000 1600
+Wire Wire Line
+	7000 1600 6500 1600
+Connection ~ 7000 1400
+Connection ~ 8100 1400
+Wire Wire Line
+	8500 1500 8600 1500
+Wire Wire Line
+	8100 1400 8300 1400
+Wire Wire Line
+	6900 1400 7000 1400
+Wire Wire Line
+	6500 1300 6600 1300
+Wire Wire Line
+	6900 1300 7100 1300
+Wire Wire Line
+	8700 1000 8600 1000
+Connection ~ 8600 1600
+Wire Wire Line
+	8600 1500 8600 1600
+Wire Wire Line
+	8100 1400 8100 1500
+Wire Wire Line
+	8300 1400 8300 1300
+Text Notes 600  2300 0    50   ~ 10
+Voltage Regulation
+Wire Notes Line
+	2000 2200 2000 4200
+Wire Notes Line
+	2000 4200 3100 4200
+Wire Notes Line
+	3100 4200 3100 2200
+Wire Notes Line
+	3100 2200 2000 2200
+Text Notes 2100 2300 0    50   ~ 10
+Mounting
+Wire Notes Line
+	6200 500  6200 2300
+Wire Notes Line
+	6200 2300 9200 2300
+Wire Notes Line
+	9200 2300 9200 500 
+Wire Notes Line
+	9200 500  6200 500 
+Text Notes 6300 600  0    50   ~ 10
+UART to RS485
+$EndSCHEMATC

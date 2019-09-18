@@ -1,0 +1,3 @@
+[submodule "src/subsch"]
+	path = src/subsch
+	url = git@github.com:cyber-murmel/subsch.git
